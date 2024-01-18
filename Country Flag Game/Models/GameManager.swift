@@ -6,7 +6,6 @@
 //
 
 import Foundation
-
 import SwiftUI
 
 class GameManager: ObservableObject {
@@ -18,9 +17,11 @@ class GameManager: ObservableObject {
     @Published private(set) var answerChoices = [Answer]()
     @Published private(set) var progress: CGFloat = 0.0
     @Published private(set) var score = 0
+    
     init() {
         reset()
     }
+    
     func reset() {
         loadQuestions()
         questions = questions.shuffled()
@@ -30,6 +31,7 @@ class GameManager: ObservableObject {
         playingGame = true
         goToNextQuestion()
     }
+    
     func loadQuestions() {
         let countries = Data().countries
         if countries.count < 4 {
@@ -60,6 +62,7 @@ class GameManager: ObservableObject {
             }
         }
     }
+    
     func goToNextQuestion() {
         if index < questions.count {
             answerSelected = false
@@ -73,6 +76,7 @@ class GameManager: ObservableObject {
             playingGame = false
         }
     }
+    
     func selectAnswer(answer: Answer) {
         answerSelected = true
         if answer.isCorrect {
