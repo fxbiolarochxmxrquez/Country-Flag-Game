@@ -12,6 +12,7 @@ struct Data {
         "Angola",
         "Austria",
         "China",
+        "Egypt",
         "England",
         "Estonia",
         "France",
@@ -20,6 +21,7 @@ struct Data {
         "India",
         "Israel",
         "Italy",
+        "Mexico",
         "Norway",
         "Pakistan",
         "Peru",
@@ -27,7 +29,10 @@ struct Data {
         "South Africa",
         "Spain",
         "Sweden",
+        "The Bahamas",
+        "Uganda",
         "Ukraine",
-        "United States"
+        "United States",
+        "Vietnam"
     ]
 }
